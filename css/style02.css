@@ -1,0 +1,559 @@
+/* 기본설정 */
+
+@import url(..//css/fonts.css);
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300&display=swap');
+
+html {
+ font-size: 16px;
+ color: #eee;
+ line-height: 1.5;
+ scroll-behavior: smooth;
+}
+/* css 초기화 */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #eee;
+}
+
+body * {
+  box-sizing: border-box;
+}
+
+/* Header */
+
+header {
+  position: fixed;
+  width: 15%;
+  max-width: 300px;
+  height: 100%;
+  background-color: #222;
+}
+/* 로고 설정 */
+#logo {
+  position: absolute;
+  left: 50%;
+  margin-left: -100px;
+  width: 200px;
+  height: 200px;
+  background-image: url('../images/LOGO1.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* Gnb 설정 */
+#gnb {
+  position: absolute;
+  top: 300px;
+  margin: 0 auto;
+  margin-left: 10%;
+}
+
+#gnb li a {
+  display: block;
+  font-weight: bold;
+  font-style: italic;
+  padding: 30px 30px;
+  opacity: 0.6;
+  transition: all 0.6s;
+}
+
+#gnb li a i {
+  margin-right: 1rem;
+}
+
+#gnb li a:hover {
+  opacity: 1;
+  color: skyblue;
+}
+/*HEADER : PRIVATE CONTACT */
+.sns {
+  display: block;
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  margin-left: -100px;
+  width: 200px;
+  height: 50px;
+  text-align: center;
+  opacity: 0.5;
+  transition: all 0.6s;
+}
+
+.sns a {
+  float: left;
+  display: block;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+}
+
+.sns a:hover i {
+  color: dodgerblue;
+  opacity: 1;
+}
+
+.sns a:nth-last-child(1){
+  color: red;
+}
+
+.sns i {
+  font-size: 30px;
+}
+
+.sns .icon {
+  width: 40px;
+  height: 30px;
+}
+
+.sns .stxt {
+  display: block;
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.sns p {
+  position: relative;
+  width: 200px;
+  height: 50px;
+  top: -30px;
+}
+
+/* NAV */
+nav {
+  position: absolute;
+  left: 15%;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 10%;
+  align-items: center;
+  width: 85%;
+  background-color: transparent;
+  height: 50px;
+  font-weight: bold;
+  font-style: italic;
+  transition: all 0.6s;
+}
+
+nav a:hover {
+  color: skyblue;
+}
+
+/* 컨테이너 */
+.container {
+  position: relative;
+  width: 85%;
+  margin-left: 15%;
+}
+
+/* 박스 공통 */
+.box {
+  float: left;
+  height: 50vh;
+  overflow: hidden;
+}
+
+/* 각 박스 크기 설정 */
+.box1 {
+  width: 100%;
+  height: 100vh;
+}
+
+.box2 {
+  width: 25%;
+}
+
+.box3 {
+  width: 75%;
+}
+/* 브랜드 히스토라 */
+.box4 {
+  width: 100%;
+  height: 15vh;
+}
+/* Can */
+.box5 {
+  width: 25%;
+}
+
+.box6 {
+  width: 25%;
+}
+
+.box7 {
+  width: 25%;
+}
+
+.box8 {
+  width: 25%;
+}
+/* Package */
+.box9 {
+  width: 100%;
+  height: 15vh;
+}
+
+.box10 {
+  width: 33.3333%;
+}
+
+.box11 {
+  width: 33.3333%;
+}
+
+.box12 {
+  width: 33.3333%;
+}
+/* div가 box에 꽉 차게 */
+.box > div {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* 배경이미지 삽입 및 위치 조정*/
+.bg1 {
+  background-image: url('../images/Bg1.jpg.jpg');
+}
+.bg3 {
+  background-image: url('../images/bg2.jpg');
+}
+.bg5 {
+  background-image: url('../images/image1.jpg');
+}
+.bg6 {
+  background-image: url('../images/image2.jpg');
+}
+.bg7 {
+  background-image: url('../images/image3.jpg');
+}
+.bg8 {
+  background-image: url('../images/image4.jpg');
+}
+.bg10 {
+  background-image: url('../images/image07.jpg');
+}
+.bg11 {
+  background-image: url('../images/image08.jpg');
+}
+.bg12 {
+  background-image: url('../images/image09.jpg');
+}
+.bg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+/* TOP버튼 */
+#btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(199 , 199, 199, 0.5);
+}
+
+#btn a {
+  color: crimson;
+  font-size: 1.5rem;
+}
+/* 스크롤 스냅 */
+.container {
+  scroll-snap-align: end;
+}
+
+/* 배경이미지 있는 박스 내부 설정 */
+.bg span {
+  position: absolute;
+  bottom: 0%;
+  right: 50px;
+  font-size: 4.5rem;
+  transform: scale(10);
+  opacity: 0;
+  transition: all 0.6s;
+}
+
+.bg:hover span {
+  transform : scale(1);
+  opacity: 1;
+}
+
+/* box1 세부 설정 */
+.bg1 span {
+  top: 20%;
+  left: 10%;
+}
+
+.bg1 span:nth-last-child(2) {
+  top: 30%;
+  font-weight: 400;
+  font-size: 6rem;
+}
+
+.bg1 .list {
+  position: absolute;
+  top: 10%;
+  width: 200px;
+  height: 50px;
+  color: #aaa;
+  font-size: 30px;
+  text-align: right;
+  border-bottom: #aaa 5px solid;
+}
+
+.bg1:hover .list {
+  color: white;
+}
+/* box3 세부설정 */
+.bg3:hover span {
+  top: 10%;
+  left: 5%;
+}
+/* can 세부설정 */
+.can span {
+  position: absolute;
+  margin-left: -85px;
+  display: block;
+  color: #555;
+  font-weight: bold;
+  transform: rotateY(0);
+}
+
+.can {
+  transition: all 0.6s;
+  opacity: 0.3;
+}
+
+.can:hover {
+  opacity: 1;
+}
+
+.can:hover span {
+  transform: rotateY(360deg)
+}
+
+/* 텍스트 박스 설정 */
+.txt {
+  background-color: #222;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 100px;
+  transition: all 0.6s;
+}
+
+.box2 p{
+  position: absolute;
+  left: 50%;
+  margin-left: -40%;
+}
+
+.txt i {
+  position: absolute;
+  font-size: 20rem;
+  left: 30%;
+  opacity: 0;
+  color: #014b92;
+}
+
+.txt :nth-child(3) {
+  left: 20%;
+}
+.txt p {
+  z-index: 10;
+  line-height: 40px;
+}
+
+.txt strong {
+  font-size: 4rem;
+  z-index: 10;
+}
+
+.txt:hover {
+  background-image: linear-gradient(
+    90deg, #014b92, #008ad3
+  );
+}
+/* >> 이동 애니메이션 */
+.box:hover .txt i {
+  animation: arrow infinite 1s linear;
+}
+
+@keyframes arrow {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    left : 70%;
+    opacity: 0;
+    transform: scale(1.5);
+    color: skyblue;
+  }
+}
+/* 평소 불투명, 호버시 보이게 */
+.pkg {
+  opacity: 0.3;
+  transition: all 0.6s;
+}
+
+.pkg:hover {
+  opacity: 1;
+}
+
+/* 스크롤바 스타일 */
+html::-webkit-scrollbar {
+  width: 8px;
+  background-color: #222;
+}
+
+html::-webkit-scrollbar-thumb{
+  background-color: skyblue;
+  
+}
+html::-webkit-scrollbar-track {
+  background-color: #555;
+}
+
+/* 반응형 1600PX 이하 */
+@media screen and (max-width: 1600px) {
+  
+  header {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    max-width: 100vw;
+    width: 100%;
+    height: 100px;
+  }
+
+  #logo {
+    width: 200px;
+    height: 100px;
+    left: 15%;
+    top: 10px;
+  }
+
+  #gnb {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 60%;
+    top: 0%;
+  }
+
+  #gnb li {
+    text-align: center;
+  }
+
+  #gnb li a {
+    display: block;
+    text-align: center;
+  }
+
+  .sns {
+    top: 10%;
+    left: 90%;
+  }
+  
+   .sns .stxt {
+    display: none;
+  }
+
+   .sns p {
+    display: inline-block;
+    width: 100px;
+  }
+
+   .sns p i {
+    line-height: 100px;
+   }
+
+   .txt {
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+   }
+
+  nav {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    margin-left: 0;
+    padding-left: 160px;
+  }
+
+  .container {
+    top: 50px;
+    width: 100%;
+    margin-left: 0;
+    position: relative;
+  }
+}
+/* 1200px 이하 */
+@media screen and (max-width : 1200px) {
+  .sns {
+    display: none;
+  }
+
+
+}
+/* 780px 이하 */
+@media screen and (max-width : 780px){
+  nav {
+    display: none;
+  }
+
+  #gnb {
+    width: 50%;
+    right: 10%;
+  }
+
+  .list {
+    display: none;
+  }
+
+  .box1 {
+    height: 75vh;
+  }
+
+  .bg1 span {
+    font-size: 3rem;
+  }
+
+  .box2 {
+    width: 100%;
+    height: 25vh;
+  }
+
+  .box3 {
+    width: 100%;
+  }
+
+  .bg3 span{
+    font-size: 3rem;
+  }
+}
